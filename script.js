@@ -35,7 +35,6 @@ const dateDisplay = document.getElementById("date");
 playBtn.addEventListener("click", play);
 guessBtn.addEventListener("click", makeGuess);
 giveUpBtn.addEventListener("click", giveUp); 
-giveUpBtn.addEventListener("click", giveUp);
 
 
 function getSuffix(day) {
