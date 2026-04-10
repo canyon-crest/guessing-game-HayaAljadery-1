@@ -184,7 +184,7 @@ function updateScore(score, isWin) {
     for (let i = 0; i < winScores.length; i++) {
       sum += winScores[i];
     }
-    avgScoreDisplay.textContent = "Average Score: " + (sum / winScores.length);
+    avgScoreDisplay.textContent = "Average Score: " + (sum / winScores.length).toFixed(0);
   } else {
     avgScoreDisplay.textContent = "Average Score: 0";
   }
@@ -247,14 +247,26 @@ function reset() {
 
 
 function giveUp() {
-  let giveUpScore = range;
-  msg.textContent = playerName + ", you gave up. The correct number was " + answer + ".";
+let giveUpScore = range;
 
 
   updateScore(giveUpScore, false);
   updateTimers(new Date().getTime());
 
 
+  msg.textContent = playerName + ", you gave up. The correct number was " + answer + ".";
+
+
   guessBtn.disabled = true;
-  reset();
+  giveUpBtn.disabled = true;
+  playBtn.disabled = false;
+
+
+  let levels = document.getElementsByName("level");
+  for (let i = 0; i < levels.length; i++) {
+    levels[i].disabled = false;
+  }
+
+
+  guessInput.value = "";
 }
