@@ -34,7 +34,7 @@ const dateDisplay = document.getElementById("date");
 
 playBtn.addEventListener("click", play);
 guessBtn.addEventListener("click", makeGuess);
-giveUpBtn.addEventListener("click", giveUp);    ``
+giveUpBtn.addEventListener("click", giveUp); 
 giveUpBtn.addEventListener("click", giveUp);
 
 
@@ -258,11 +258,4 @@ function giveUp() {
 
   guessBtn.disabled = true;
   reset();
-}
-
-function giveUp(){
-    let giveUpScore = range;
-    msg.textContent = "You gave up! The number was " + answer;
-    updateScore(giveUpScore);
-    resetGame();
 }
