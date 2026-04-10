@@ -177,7 +177,8 @@ Use these function names. Wire the buttons with `addEventListener`, not `onclick
 ### Event Listeners
 
 ```javascript
-document.getElementById("playBtn").addEventListener("click", play);
+document.getElementById("playBtn").addEventListener("click", play)**You must create a file called `BEYOND.md`** in the root of your project. In this file, describe:
+;
 document.getElementById("guessBtn").addEventListener("click", makeGuess);
 document.getElementById("giveUpBtn").addEventListener("click", giveUp);
 ```
@@ -202,7 +203,6 @@ The autograder runs 12 tests using Jest and jsdom. Here is how it interacts with
 
 The remaining **10 points** are graded by your teacher for creative features beyond the requirements.
 
-**You must create a file called `BEYOND.md`** in the root of your project. In this file, describe:
 
 1. What extra features you added
 2. Where each feature is in your code (function name or line numbers)

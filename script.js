@@ -31,6 +31,11 @@ const fastestDisplay = document.getElementById("fastest");
 const avgTimeDisplay = document.getElementById("avgTime");
 const dateDisplay = document.getElementById("date");
 
+guessInput.addEventListener("keydown", function(e) {
+  if (e.key === "Enter") {
+    makeGuess();
+  }
+});
 
 playBtn.addEventListener("click", play);
 guessBtn.addEventListener("click", makeGuess);
